@@ -1,0 +1,43 @@
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<div id="root"></div>
+
+
+<script type="text/babel">
+    //creacting function component
+    function Product(xyz) {     //every component name first letter must in capital letter
+        return (
+            <div class="col-xl-3">
+                <img src={xyz.path} alt="" class="img-fluid"/>
+                <h2>{xyz.name}</h2>
+                <p>{xyz.price}</p>
+                <p><button >Add to Cart</button></p>
+            </div>) //every component must return something
+    }
+  
+    var record = (
+        <div class="container">
+            <div class="row"> 
+                <Product name="Shirt 1" price="1200" path="https://rukminim1.flixcart.com/ image/503/604/l16rde80/shirt/4/y/y/xxl-st2-vebnor-original-imagcsujaggmjyux.jpeg?q=50"/>    {/*calling component with that name */}
+
+
+                <Product name="Shirt 2" price="1000" path="https://rukminim1.flixcart.com/image/503/604/kst9gnk0/shirt/r/s/t/xxl-frml-st2-vebnor-original-imag6at4hgjrvyun.jpeg?q=50"/>
+                                        
+                                        {/* giving name and price for different product s*/}
+
+
+                <Product name="Shirt 3" price="2200" path="https://rukminim1.flixcart.com/image/503/604/kc0u7bk0/shirt/k/a/a/m-pk19sh09g-surhi-original-imaft8vgvhmhbhsy.jpeg?q=50"/>
+
+
+                <Product name="Shirt 4" price="500" path="https://rukminim1.flixcart.com/image/503/604/kxdl3m80/shirt/a/7/a/l-ts-shirt1083-tanip-original-imag9ugfzkdhprzn.jpeg?q=50"/>
+            </div>
+        </div>
+
+    )
+    ReactDOM.render(record, document.getElementById("root"))
+</script>

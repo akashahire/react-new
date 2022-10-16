@@ -1,0 +1,30 @@
+<script>
+
+//single level inheritance 
+    class a {
+        myfun() {
+
+            console.log("class a");
+        }
+
+    }
+
+
+    class b extends a {
+
+        myfun2() {
+
+
+
+            console.log("class b");
+            super.myfun();
+        }
+        
+
+    }
+    var ab=new a();
+    console.log(ab);
+    ab.myfun();
+    ab.myfun2();
+
+</script>

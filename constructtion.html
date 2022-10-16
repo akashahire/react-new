@@ -1,0 +1,19 @@
+
+<script>
+    class tv{                                     //tv
+     constructor(){                               //constructor call implicitly not explicitly
+    console.log("constructor");
+    this.channel="pogo";
+    
+     }
+     volume(){
+        console.log("dolby sound");
+        console.log(this.channel);
+     }
+    
+    }
+    var remote= new tv();
+    var remote1=new tv(); 
+    remote.volume();
+    
+    </script>
